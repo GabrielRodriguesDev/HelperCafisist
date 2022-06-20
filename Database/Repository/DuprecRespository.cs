@@ -18,7 +18,7 @@ namespace CafisistHelperCMD.Database.Repository
 
         public void AjustaDuplicatasSmartSist(int dias)
         {
-            _connection.Query(DuprecQueries.AjustaDuplicatasSmartSist(dias), new { }, _uow.CurrentTransaction());
+            _connection.Query(DuprecQueries.AjustaDuplicatasSmartSist(dias), _uow.CurrentTransaction());
         }
     }
 }
